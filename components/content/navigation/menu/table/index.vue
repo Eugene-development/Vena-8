@@ -1,0 +1,106 @@
+<template>
+  <div class="flex flex-col px-6 py-2">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-1 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead>
+            <tr>
+              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                id
+              </th>
+              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                заголовок
+              </th>
+              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                Статус
+              </th>
+              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+              </th>
+              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+              </th>
+              <th class="px-6 py-3 bg-purple-100">
+              </th>
+            </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+            <tr v-for="menu of paginateMenu" :key="menu.id">
+              <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                {{ menu.id }}
+              </td>
+              <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                {{ menu.name }}
+              </td>
+              <td class="px-6 py-3 whitespace-no-wrap">
+                    <span
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                      Active
+                    </span>
+              </td>
+              <td class="px-6 py-3 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+              <td class="px-6 py-3 whitespace-no-wrap">
+                <Toggle/>
+              </td>
+              <td class="px-6 py-3 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+
+                <ReadButton :id="menu.id"/>
+                <UpdateButton/>
+                <DeleteButton/>
+
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+            <CreateButton/>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <MenuPagination/>
+  </div>
+
+</template>
+
+<script>
+import {mapActions, mapGetters} from 'vuex'
+
+import MenuPagination from '../pagination'
+
+import Toggle from './buttons/toggle'
+import CreateButton from './buttons/create'
+import ReadButton from './buttons/read'
+import UpdateButton from './buttons/update'
+import DeleteButton from './buttons/delete'
+
+
+export default {
+  // props: ['paginateMenu'],
+  components: {
+    Toggle,
+    CreateButton,
+    ReadButton,
+    UpdateButton,
+    DeleteButton,
+    MenuPagination
+  },
+  methods: {
+    ...mapActions({
+      'handleView': 'content/navigation/menu/handleView',
+      'handleEdit': 'content/navigation/menu/handleEdit',
+      'handleDelete': 'content/navigation/menu/handleDelete'
+    })
+  },
+  computed: {
+    ...mapGetters({
+      paginateMenu: 'content/navigation/menu/paginateMenu',
+    }),
+  },
+
+
+}
+
+</script>

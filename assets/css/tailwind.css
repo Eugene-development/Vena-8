@@ -1,0 +1,14 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+/*Анимация при переходе страниц*/
+.page-enter-active, .page-leave-active{
+  transition: opacity .3s;
+}
+
+.page-enter, .page-leave-active{
+  opacity: 0;
+}
