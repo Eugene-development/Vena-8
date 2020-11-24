@@ -10,9 +10,6 @@
     >
 
 
-
-
-
     <div v-if="visibleSidebar"
          style="background-image: url(https://i.pinimg.com/736x/f8/78/ee/f878ee3241b15c880d9d8ab7e1bf948b--geometry-material.jpg)"
          class="w-64 overflow-scroll ">
