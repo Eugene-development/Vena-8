@@ -153,7 +153,7 @@ export const actions = {
   currentMenuForm_update( {commit, state}, e ) {
     const currentMenu_update = {
       id: state.currentMenu_update.id,
-      name: e
+      name: e.target.value
     };
     commit('CURRENT_MENU_UPDATE', currentMenu_update)
   },
@@ -177,11 +177,6 @@ export const actions = {
       console.error(e)
     } finally {
       const dialogUpdate = false;
-      commit('DIALOG_UPDATE', dialogUpdate);
-      Message.success({
-        message: 'Значение успешно обновлено',
-        center: true
-      });
       commit('DIALOG_UPDATE', dialogUpdate);
     }
   },
