@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="false"
+    v-if="dialogUpdate"
     class="fixed z-10 inset-0 overflow-y-auto">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
       <!--
@@ -67,9 +67,21 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import {mapActions, mapGetters} from 'vuex'
 export default {
-
+  computed: {
+    ...mapGetters({
+      dialogUpdate: 'content/navigation/menu/dialogUpdate',
+      currentMenu_update: 'content/navigation/menu/currentMenu_update',
+    }),
+  },
+  methods: {
+    ...mapActions({
+      createMenu:'content/navigation/menu/createMenu',
+      dialogCreateClose:'content/navigation/menu/dialogCreateClose',
+      currentMenuForm_create: 'content/navigation/menu/currentMenuForm_create',
+    })
+  }
 }
 </script>
 

@@ -131,6 +131,17 @@ export const actions = {
     commit('CURRENT_MENU_READ', currentMenu_read)
   },
 
+
+
+
+
+
+
+
+
+
+
+
   //UPDATE
   async handleEdit ( { commit, state }, id ) {
     const dialogUpdate = true;
@@ -174,6 +185,19 @@ export const actions = {
       commit('DIALOG_UPDATE', dialogUpdate);
     }
   },
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   //DELETE
   async handleDelete ({ commit, state }, id){

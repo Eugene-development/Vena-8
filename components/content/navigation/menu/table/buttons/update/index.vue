@@ -1,5 +1,8 @@
 <template>
-  <button type="button" class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-blue-500 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-blue-200 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+  <button
+    @click="handleEdit (id)"
+    type="button"
+    class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-blue-500 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-blue-200 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
     <svg
       class=" h-4 w-4  duration-150"
       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -9,8 +12,15 @@
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
-name: "index"
+  props: ['id'],
+  methods: {
+    ...mapActions({
+      handleEdit:'content/navigation/menu/handleEdit'
+    })
+  },
 }
 </script>
 

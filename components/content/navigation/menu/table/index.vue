@@ -44,8 +44,8 @@
               <td class="px-6 py-3 whitespace-no-wrap text-right text-sm leading-5 font-medium">
 
                 <ReadButton :id="menu.id"/>
-                <UpdateButton/>
-                <DeleteButton/>
+                <UpdateButton :id="menu.id"/>
+                <DeleteButton :id="menu.id"/>
 
               </td>
             </tr>

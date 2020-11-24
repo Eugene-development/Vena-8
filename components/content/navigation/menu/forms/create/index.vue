@@ -30,7 +30,7 @@
           To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       -->
       <div
-        class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+        class="inline-block align-bottom bg-gray-200 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
         <form >
           <div>
             <div>
@@ -39,15 +39,15 @@
                   Добавить значение
                 </h3>
                 <p class="mt-1 text-sm leading-5 text-gray-500">
-                  Таблица "Меню".
+                  Таблица "Меню"
                 </p>
               </div>
             </div>
-            <div class="mt-8 border-t border-gray-200 pt-8">
-              <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-                <div class="sm:col-span-3">
+            <div class="mt-8 border-t border-gray-400 pt-8">
+              <div class="mt-6 ">
+                <div class="mx-2 sm:col-span-3 ">
                   <label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">
-                    Значение
+                    Добавьте значение
                   </label>
                   <div class="mt-1 rounded-md shadow-sm">
                     <input

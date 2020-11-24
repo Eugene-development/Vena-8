@@ -21,7 +21,6 @@ export default {
       handleAdd:'content/navigation/menu/handleAdd'
     })
   },
-name: "index"
 }
 </script>
 
