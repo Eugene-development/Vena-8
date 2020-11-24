@@ -1,5 +1,8 @@
 <template>
-  <button type="button" class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-red-500 bg-red-100 hover:bg-red-200 focus:outline-none focus:border-red-300 focus:shadow-outline-red active:bg-red-200 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+  <button
+    @click="handleDelete (id)"
+    type="button"
+    class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-red-500 bg-red-100 hover:bg-red-200 focus:outline-none focus:border-red-300 focus:shadow-outline-red active:bg-red-200 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
     <svg
       class=" h-4 w-4  duration-150"
       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -9,8 +12,15 @@
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
-name: "index"
+  props: ['id'],
+  methods: {
+    ...mapActions({
+      handleDelete:'content/navigation/menu/handleDelete'
+    })
+  },
 }
 </script>
 

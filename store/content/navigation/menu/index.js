@@ -231,10 +231,6 @@ export const actions = {
       console.error(e)
     } finally {
       const dialogDelete = false;
-      Message.success({
-        message: 'Значение успешно удалено',
-        center: true
-      });
       commit('DIALOG_DELETE', dialogDelete)
     }
   },
