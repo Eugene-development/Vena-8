@@ -30,10 +30,9 @@
           To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       -->
       <div
-        class="inline-block align-bottom bg-gray-800 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-        <form >
-          <div>
-            <div>
+        aria-labelledby="modal-headline"
+        aria-modal="true" class="inline-block align-bottom bg-gray-800 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full sm:p-6" role="dialog">
+        <form>
               <div>
                 <h3 class="text-lg leading-6 font-medium text-gray-100">
                   Изменить значение
@@ -42,49 +41,42 @@
                   Таблица "Меню"
                 </p>
               </div>
-            </div>
             <div class="mt-8 border-t border-gray-400 pt-8">
               <div class="mt-6 ">
                 <div class="mx-2 sm:col-span-3 ">
-                  <label for="first_name" class="block text-sm font-medium leading-5 text-gray-100">
+                  <label class="block text-sm font-medium leading-5 text-gray-100" for="first_name">
                     Измените значение
                   </label>
                   <div class="mt-1 rounded-md shadow-sm">
                     <input
-                      :value="currentMenu_update.name"
-                      @input="currentMenuForm_update"
                       id="first_name"
-                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-8">
+                      :value="currentMenu_update.name"
+                      class="rounded-md pl-2 form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-8"
+                      @input="currentMenuForm_update">
                   </div>
                 </div>
 
               </div>
             </div>
-          </div>
-          <div class="mt-8 pt-5">
-            <div class="flex justify-end">
-              <span class="ml-3 inline-flex rounded-md shadow-sm">
-        <button
-          @click.prevent="updateMenu"
-          type="submit"
-          class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
-          Изменить
-        </button>
-      </span>
-            </div>
-          </div>
         </form>
 
 
+        <div class="mt-8 sm:mt-6">
+          <span class="w-full rounded-md shadow-sm">
+            <button
+              class="mt-10 inline-flex justify-center w-full py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-teal-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+              type="submit"
+              @click.prevent="updateMenu">
+              Изменить
+            </button>
 
-        <div class="mt-5 sm:mt-6">
-        <span class="flex w-full rounded-md shadow-sm">
-          <button
-            @click="dialogUpdateClose"
-            type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-            Закрыть
-          </button>
-        </span>
+            <button
+              class="mt-2 inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+              type="button"
+              @click="dialogUpdateClose">
+              Закрыть
+            </button>
+          </span>
         </div>
       </div>
     </div>
@@ -94,6 +86,7 @@
 
 <script>
 import {mapActions, mapGetters} from 'vuex'
+
 export default {
   computed: {
     ...mapGetters({
@@ -103,8 +96,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      updateMenu:'content/navigation/menu/updateMenu',
-      dialogUpdateClose:'content/navigation/menu/dialogUpdateClose',
+      updateMenu: 'content/navigation/menu/updateMenu',
+      dialogUpdateClose: 'content/navigation/menu/dialogUpdateClose',
       currentMenuForm_update: 'content/navigation/menu/currentMenuForm_update',
     })
   }

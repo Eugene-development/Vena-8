@@ -54,23 +54,11 @@
                       :value="currentMenu_create.name"
                       @input="currentMenuForm_create"
                       id="first_name"
-                      class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-8">
+                      class="rounded-md pl-2 form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-8">
                   </div>
                 </div>
 
               </div>
-            </div>
-          </div>
-          <div class="mt-8 pt-5">
-            <div class="flex justify-end">
-              <span class="ml-3 inline-flex rounded-md shadow-sm">
-        <button
-          @click.prevent="createMenu"
-          type="submit"
-          class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
-          Добавить
-        </button>
-      </span>
             </div>
           </div>
         </form>
@@ -78,10 +66,16 @@
 
 
         <div class="mt-5 sm:mt-6">
-        <span class="flex w-full rounded-md shadow-sm">
+        <span class="w-full rounded-md shadow-sm">
+          <button
+            @click.prevent="createMenu"
+            type="submit"
+            class="mt-10 inline-flex justify-center w-full py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-green-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+            Добавить
+          </button>
           <button
             @click="dialogCreateClose"
-            type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+            type="button" class="mt-2 inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5">
             Закрыть
           </button>
         </span>
