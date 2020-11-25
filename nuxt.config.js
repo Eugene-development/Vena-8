@@ -40,6 +40,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/auth',
   ],
   /*
   ** Nuxt.js modules
@@ -63,5 +64,27 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'http://127.0.0.1:8000/api/login', method: 'post', propertyName: 'meta.token'
+          },
+          user: {
+            url: 'http://127.0.0.1:8000/api/me', method: 'get', propertyName: 'data'
+          },
+          logout: {
+            url: 'http://127.0.0.1:8000/api/logout', method: 'post'
+          }
+        }
+      }
+    },
+    // redirect: {
+    //   login: '/auth/signin',
+    //   home: '/'
+    // }
+  },
+
 }
