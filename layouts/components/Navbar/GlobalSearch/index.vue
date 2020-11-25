@@ -11,7 +11,7 @@
           </svg>
         </div>
         <input id="search"
-               class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-gray-100 text-gray-700 placeholder-gray-800 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out"
+               class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 text-gray-700 placeholder-gray-800 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out"
                placeholder="Глобальный поиск" type="search">
       </div>
     </div>

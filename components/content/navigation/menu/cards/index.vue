@@ -1,7 +1,7 @@
 <template>
   <div class="px-6 py-3">
     <div class="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-3 ">
-      <div class="overflow-hidden shadow rounded-lg bg-purple-100">
+      <div class="overflow-hidden shadow rounded-lg bg-gray-100">
         <div class="px-2 py-1 sm:p-4">
           <dl>
             <dt class="text-sm leading-5 font-medium text-gray-600 truncate">
@@ -13,7 +13,7 @@
           </dl>
         </div>
       </div>
-      <div class="overflow-hidden shadow rounded-lg bg-purple-100">
+      <div class="overflow-hidden shadow rounded-lg bg-gray-100">
         <div class="px-2 py-1 sm:p-4">
           <dl>
             <dt class="text-sm leading-5 font-medium text-gray-600 truncate">
@@ -25,7 +25,7 @@
           </dl>
         </div>
       </div>
-      <div class="overflow-hidden shadow rounded-lg bg-purple-100">
+      <div class="overflow-hidden shadow rounded-lg bg-gray-100">
         <div class="px-2 py-1 sm:p-4">
           <dl>
             <dt class="text-sm leading-5 font-medium text-gray-600 truncate">
