@@ -1,5 +1,5 @@
 <template>
-  <div class="border-b-2 bg-gray-100">
+  <div class="border-b-2 ">
     <nav class="mx-6">
       <div class="max-w-7xl mx-auto">
         <div class="relative flex items-center justify-between h-16">
