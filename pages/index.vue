@@ -36,6 +36,8 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  layout: 'empty',
+
   components: {
     Logo
   }
