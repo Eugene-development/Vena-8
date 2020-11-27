@@ -11,17 +11,11 @@
 
 
     <div v-if="visibleSidebar"
-         style="background-image: url(https://i.pinimg.com/736x/f8/78/ee/f878ee3241b15c880d9d8ab7e1bf948b--geometry-material.jpg)"
-         class="w-64 overflow-scroll ">
-
+         class="w-64 overflow-scroll bg-gradient-to-b from-black to bg-gray-800">
 <!--    <div v-if="visibleSidebar"-->
-<!--         style="background-image: url(http://cdn.paperhi.com/1920x1080/20130410/abstract%20black%20and%20white%20black%20burst%20geometry%20monochrome%20lines%20simple%20rays%20symmetric%20radial%201920x_www.paperhi.com_87.jpg)"-->
+<!--         style="background-image: url(https://i.pinimg.com/736x/f8/78/ee/f878ee3241b15c880d9d8ab7e1bf948b&#45;&#45;geometry-material.jpg)"-->
 <!--         class="w-64 overflow-scroll ">-->
 
-<!--    <div v-if="visibleSidebar"-->
-<!--         style="background-image: url(https://img5.goodfon.ru/original/3840x2160/c/8f/fon-linii-abstraktsiia-minimalnyi-tekstura-chernyi.jpg)"-->
-<!--         class="w-64 overflow-scroll ">-->
-<!--test-->
 
 
       <div class="flex items-center flex-shrink-0 px-4 ">
