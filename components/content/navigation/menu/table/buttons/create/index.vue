@@ -3,7 +3,7 @@
     <button
       @click="handleAdd"
       type="button"
-      class="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-green-500 bg-green-100 hover:bg-green-300 focus:outline-none focus:border-green-300 focus:shadow-outline-green active:bg-green-200 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+      class="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-green-500 bg-green-50 hover:bg-green-300 focus:outline-none focus:border-green-300 focus:shadow-outline-green active:bg-green-200 transition ease-in-out duration-150 sm:text-sm sm:leading-5">
       <svg
         class="h-4 w-4"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

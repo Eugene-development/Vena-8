@@ -1,10 +1,10 @@
 <template>
-  <nuxt />
+<p>Office</p>
 </template>
 
 <script>
 export default {
-name: "empty"
+  name: "index"
 }
 </script>
 

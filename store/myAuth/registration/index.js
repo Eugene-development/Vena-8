@@ -7,7 +7,7 @@ export const actions = {
 
   updateRuleForm_name ({commit, state}, e) {
     const ruleForm = {
-      name: e,
+      name: e.target.value,
       email: state.ruleForm.email,
       password: state.ruleForm.password
     };
@@ -16,7 +16,7 @@ export const actions = {
   updateRuleForm_email ({commit, state}, e) {
     const ruleForm = {
       name: state.ruleForm.name,
-      email: e,
+      email: e.target.value,
       password: state.ruleForm.password
     };
     commit('RULE_FORM', ruleForm)
@@ -25,7 +25,7 @@ export const actions = {
     const ruleForm = {
       name: state.ruleForm.name,
       email: state.ruleForm.email,
-      password: e
+      password: e.target.value
     };
     commit('RULE_FORM', ruleForm)
   },
@@ -38,7 +38,9 @@ export const actions = {
       //   center: true
       // });
     } else {
-      await this.$axios.post('http://127.0.0.1:8000/api/register', state.ruleForm);
+
+      // await this.$axios.post('http://127.0.0.1:8000/api/register', state.ruleForm);
+      await this.$axios.post('http://localhost:80/api/register', state.ruleForm);
 
       await this.$auth.login({
         data: {
@@ -47,14 +49,13 @@ export const actions = {
         }
       });
 
-      await this.$router.push(
-        '/admin/office'
+      await $nuxt.$router.push(
+        '/dashboard'
         //   {
         //   path: this.$router.replace({ path: '/admin/office' })
         //   path: this.$route.query.redirect || '/admin/office'
         // }
       )
-
     }
 
   },

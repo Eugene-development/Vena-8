@@ -63,6 +63,7 @@
 
 
             <div
+              v-if="!$auth.loggedIn"
               aria-labelledby="user-menu" aria-orientation="vertical"
               class="py-1 rounded-md bg-white shadow-xs "
               role="menu">
@@ -80,6 +81,7 @@
 
 
             <div
+              v-if="$auth.loggedIn"
               aria-labelledby="user-menu" aria-orientation="vertical"
               class="py-1 rounded-md bg-white shadow-xs "
               role="menu">

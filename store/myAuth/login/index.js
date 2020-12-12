@@ -8,7 +8,7 @@ export const actions = {
   updateRuleForm_email ({commit, state}, e) {
     const ruleForm = {
       name: state.ruleForm.name,
-      email: e,
+      email: e.target.value,
       password: state.ruleForm.password
     };
     commit('RULE_FORM', ruleForm)
@@ -17,7 +17,7 @@ export const actions = {
     const ruleForm = {
       name: state.ruleForm.name,
       email: state.ruleForm.email,
-      password: e
+      password: e.target.value
     };
     commit('RULE_FORM', ruleForm)
   },
@@ -37,7 +37,7 @@ export const actions = {
       });
 
       await this.$router.push(
-        '/admin/office'
+        '/dashboard'
       )
     }
   },

@@ -6,6 +6,11 @@ export default {
   },
 
   mode: 'universal',
+
+
+  // router: {
+  //   middleware: 'access',
+  // },
   /*
   ** Headers of the page
   */
@@ -65,26 +70,61 @@ export default {
     extend (config, ctx) {
     }
   },
+  // auth: {
+  //   strategies: {
+  //     local: {
+  //       endpoints: {
+  //         login: {
+  //           url: 'http://127.0.0.1:8000/api/login', method: 'post', propertyName: 'meta.token'
+  //         },
+  //         user: {
+  //           url: 'http://127.0.0.1:8000/api/me', method: 'get', propertyName: 'data'
+  //         },
+  //         logout: {
+  //           url: 'http://127.0.0.1:8000/api/logout', method: 'post'
+  //         }
+  //       }
+  //     }
+  //   },
+  //   // redirect: {
+  //   //   login: '/auth/signin',
+  //   //   home: '/'
+  //   // }
+  // },
+
+
+
+
   auth: {
     strategies: {
       local: {
         endpoints: {
           login: {
-            url: 'http://127.0.0.1:8000/api/login', method: 'post', propertyName: 'meta.token'
+            url: 'http://localhost:80/api/login', method: 'post', propertyName: 'meta.token'
           },
           user: {
-            url: 'http://127.0.0.1:8000/api/me', method: 'get', propertyName: 'data'
+            url: 'http://localhost:80/api/me', method: 'get', propertyName: 'data'
           },
           logout: {
-            url: 'http://127.0.0.1:8000/api/logout', method: 'post'
+            url: 'http://localhost:80/api/logout', method: 'post'
           }
         }
       }
     },
-    // redirect: {
-    //   login: '/auth/signin',
-    //   home: '/'
-    // }
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //   // redirect: {
+  //   //   login: '/auth/signin',
+  //   //   home: '/'
+  //   // }
   },
+
+
 
 }
