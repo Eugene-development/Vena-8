@@ -5,7 +5,7 @@
   -->
   <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
-      <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/v1/workflow-mark-on-white.svg" alt="Workflow">
+      <img class="mx-auto h-12 w-auto" src="https://signal52.ru/assets/templates/s52/images/logo.png" alt="Workflow">
       <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
         Вход в аккаунт администратора
       </h2>
@@ -153,6 +153,11 @@ export default {
       // await this.$router.push({
       //   path: this.$route.query.redirect || '/dashboard'
       // });
+
+
+      // Переход на внешний ресурс
+      // window.location.href = 'https://www.google.com';
+
       await this.$router.push(
         '/dashboard'
       )

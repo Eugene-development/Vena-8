@@ -100,13 +100,13 @@ export default {
       local: {
         endpoints: {
           login: {
-            url: 'http://localhost:80/api/login', method: 'post', propertyName: 'meta.token'
+            url: 'http://localhost:8888/api/login', method: 'post', propertyName: 'meta.token'
           },
           user: {
-            url: 'http://localhost:80/api/me', method: 'get', propertyName: 'data'
+            url: 'http://localhost:8888/api/me', method: 'get', propertyName: 'data'
           },
           logout: {
-            url: 'http://localhost:80/api/logout', method: 'post'
+            url: 'http://localhost:8888/api/logout', method: 'post'
           }
         }
       }

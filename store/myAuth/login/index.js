@@ -37,7 +37,7 @@ export const actions = {
       });
 
       await this.$router.push(
-        '/dashboard'
+        'https://yandex.ru/'
       )
     }
   },

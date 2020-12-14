@@ -6,60 +6,55 @@
           <table class="min-w-full divide-y divide-gray-200">
             <thead>
             <tr>
-              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+              <th class="px-6 py-3 bg-gray-100 text-center text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
                 id
               </th>
-              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+              <th class="px-6 py-3 bg-gray-100 text-center text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
                 заголовок
               </th>
-              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+              <th class="px-6 py-3 bg-gray-100 text-center text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+              </th>
+              <th class="px-6 py-3 bg-gray-100 text-center text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
+                Скрыть
+              </th>
+              <th class="px-6 py-3 bg-gray-100 text-center text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
                 Статус
               </th>
-              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              </th>
-              <th class="px-6 py-3 bg-purple-100 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              </th>
-              <th class="px-6 py-3 bg-purple-100">
+              <th class="px-6 py-3 bg-gray-100">
               </th>
             </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
             <tr v-for="menu of paginateMenu" :key="menu.id">
-              <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+              <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 text-center">
                 {{ menu.id }}
               </td>
-              <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-gray-500">
+              <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-gray-500 text-center">
                 {{ menu.name }}
               </td>
-              <td class="px-6 py-3 whitespace-no-wrap">
-                    <span
-                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                      Active
-                    </span>
+              <td class="px-6 py-3 whitespace-no-wrap text-right text-sm leading-5 font-medium text-center">
               </td>
-              <td class="px-6 py-3 whitespace-no-wrap text-right text-sm leading-5 font-medium">
-              <td class="px-6 py-3 whitespace-no-wrap">
+              <td class="px-6 py-3 whitespace-no-wrap text-center">
                 <Toggle/>
               </td>
+              <td class="px-6 py-3 whitespace-no-wrap text-center">
+                <span
+                  class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                  Active
+                </span>
+              </td>
               <td class="px-6 py-3 whitespace-no-wrap text-right text-sm leading-5 font-medium">
-
                 <ReadButton :id="menu.id"/>
                 <UpdateButton :id="menu.id"/>
                 <DeleteButton :id="menu.id"/>
-
               </td>
             </tr>
             </tbody>
           </table>
-
-            <CreateButton/>
-
+          <CreateButton/>
         </div>
       </div>
     </div>
-
-
-
     <MenuPagination/>
   </div>
 
