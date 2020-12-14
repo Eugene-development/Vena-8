@@ -7,7 +7,7 @@
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <img class="mx-auto h-12 w-auto" src="https://signal52.ru/assets/templates/s52/images/logo.png" alt="Workflow">
       <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
-        Вход в аккаунт администратора
+        Вход в аккаунт
       </h2>
 <!--      <p class="mt-2 text-center text-sm leading-5 text-gray-600 max-w">-->
 <!--        Or-->
@@ -159,7 +159,7 @@ export default {
       // window.location.href = 'https://www.google.com';
 
       await this.$router.push(
-        '/dashboard'
+        '/'
       )
 
     },

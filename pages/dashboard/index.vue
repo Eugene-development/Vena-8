@@ -7,7 +7,8 @@
 
 <script>
 export default {
-name: "index"
+  // middleware: 'access',
+  name: "index"
 }
 </script>
 

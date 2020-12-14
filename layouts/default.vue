@@ -19,6 +19,8 @@ import Navbar from './components/Navbar'
 
 
 export default {
+  middleware: 'access',
+
   name: "index",
   components: {
     Logo,

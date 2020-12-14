@@ -12,6 +12,7 @@ import { mapGetters } from 'vuex'
 import { Menu } from '~/components'
 
 export default {
+  // middleware: 'access',
   components: {
     Menu,
   },
