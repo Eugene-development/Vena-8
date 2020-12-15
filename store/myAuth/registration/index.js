@@ -40,7 +40,7 @@ export const actions = {
     } else {
 
       // await this.$axios.post('http://127.0.0.1:8000/api/register', state.ruleForm);
-      await this.$axios.post('http://localhost:8888/api/register', state.ruleForm);
+      await this.$axios.post('http://23.111.204.148:8888/api/register', state.ruleForm);
 
       await this.$auth.login({
         data: {
@@ -48,13 +48,12 @@ export const actions = {
           password: state.ruleForm.password
         }
       });
-      await $nuxt.$router.push(
-        'www.yandex.com'
-        //   {
+      await $nuxt.$router.push('/')
+
+      //   {
         //   path: this.$router.replace({ path: '/admin/office' })
         //   path: this.$route.query.redirect || '/admin/office'
         // }
-      )
     }
 
   },

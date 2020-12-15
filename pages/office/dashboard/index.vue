@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p>Мой офис</p>
-    <p>Привет {{$auth.user.name}}</p>
+    <p>Здесь будет сводка текущей информации</p>
+    <p>Добрый день {{$auth.user.name}}</p>
   </div>
 </template>
 

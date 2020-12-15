@@ -146,7 +146,7 @@ export default {
     };
   },
   methods: {
-    async submitForm () {
+    async submitForm ({redirect}) {
       await this.$auth.login({
         data: this.ruleForm
       });
@@ -157,7 +157,11 @@ export default {
 
       // Переход на внешний ресурс
       // window.location.href = 'https://www.google.com';
-
+      if (!this.$auth.loggedIn) {
+        console.log('Нет доступа!');
+        console.log(this.$auth.loggedIn)
+        return redirect('/admin/login')
+      }
       await this.$router.push(
         '/'
       )

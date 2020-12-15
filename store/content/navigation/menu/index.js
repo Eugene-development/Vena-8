@@ -23,7 +23,7 @@ export const state = () => ({
 
 
   //Connect Docker or Amazon (no socket)
-  apiCRUD: { baseURL: 'http://localhost:7788/' }
+  apiCRUD: { baseURL: 'http://23.111.204.148:7788/' }
 
   //Connect MAMP (socket)
   // apiCRUD: { baseURL: 'http://crud:8888/' }
