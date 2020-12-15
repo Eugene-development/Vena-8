@@ -3,7 +3,7 @@ version: "3"
 services:
   nuxt:
     build: .
-    container_name: signal_app
+    container_name: vena_app
     restart: always
     ports:
       - "3050:3050"
@@ -12,9 +12,9 @@ services:
 
   nginx:
     image: nginx:1.13
-    container_name: signal-nginx
+    container_name: vena-nginx
     ports:
-      - "80:3050"
+      - "80:80"
     volumes:
       - ./nginx:/etc/nginx/conf.d
     depends_on:
