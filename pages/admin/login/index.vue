@@ -153,8 +153,6 @@ export default {
       // await this.$router.push({
       //   path: this.$route.query.redirect || '/dashboard'
       // });
-
-
       // Переход на внешний ресурс
       // window.location.href = 'https://www.google.com';
       if (!this.$auth.loggedIn) {
