@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 export default {
   server: {
@@ -8,6 +9,24 @@ export default {
   mode: 'universal',
 
 
+
+
+
+  // publicRuntimeConfig: {
+  //   baseURL: process.env.BASE_URL || 'http://23.111.204.148:7788/'
+  // },
+
+  // env: {
+  //   baseUrl: 'http://23.111.204.148:7788/'
+  // },
+
+  // env: {
+  //   baseUrl:
+  //     process.env.NODE_ENV === 'dev'
+  //       ? 'http://localhost:3000'
+  //       : 'https://my-domain.com'
+  // },
+  //
   // router: {
   //   middleware: 'access',
   // },
@@ -28,7 +47,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: 'red' },
   /*
   ** Global CSS
   */

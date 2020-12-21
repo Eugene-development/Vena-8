@@ -19,59 +19,13 @@ export const state = () => ({
   dialogUpdate: false,
   dialogDelete: false,
 
-
-
-
-  //Connect Docker or Amazon (no socket)
-  apiCRUD: { baseURL: 'http://23.111.204.148:7788/' }
+  apiCRUD: { baseURL: process.env.API_CRUD }
 
   //Connect MAMP (socket)
   // apiCRUD: { baseURL: 'http://crud:8888/' }
 });
 
 export const actions = {
-  // async fetch ({ commit, state}, { $config: { baseRL } }) {
-  //   const { data } = await this.$axios.$get(`${baseRL}/navigation-menu`);
-  //   commit('SET_MENU', data);
-  // },
-  async handleSizeChange({ commit, state }, sizePage) {
-    const chunk = (data, size) =>
-      Array.from({ length: Math.ceil(data.length / size) }, (v, i) =>
-        data.slice(i * size, i * size + size)
-      );
-    const paginateMenu = chunk(state.allMenu, sizePage)[state.currentPage - 1];
-    commit('PAGINATE_SIZE_PAGE', sizePage);
-    commit('PAGINATE_MENU', paginateMenu);
-  },
-
-  async handleCurrentChange({ state, commit }, currentPage) {
-    const chunk = (data, size) =>
-      Array.from({ length: Math.ceil(data.length / size) }, (v, i) =>
-        data.slice(i * size, i * size + size)
-      );
-    const paginateMenu = chunk(state.allMenu, state.sizePage)[currentPage - 1];
-    commit('PAGINATE_CURRENT_PAGE', currentPage);
-    commit('PAGINATE_MENU', paginateMenu);
-  },
-
-  async fetch ({ commit, state }) {
-    const { data } = await this.$axios.$get('navigation-menu', state.apiCRUD);
-
-    const chunk = (data, size) =>
-      Array.from({ length: Math.ceil(data.length / size) }, (v, i) =>
-        data.slice(i * size, i * size + size)
-      );
-    const paginateMenu = chunk(data, state.sizePage)[state.currentPage - 1];
-
-    const numberOfPage = Math.ceil(data.length / state.sizePage);
-
-    commit('ALL_MENU', data);
-    commit('PAGINATE_MENU', paginateMenu);
-    commit('NUMBER_OF_PAGE', numberOfPage);
-  },
-
-
-
 
 
   //CREATE
@@ -131,6 +85,45 @@ export const actions = {
     commit('CURRENT_MENU_READ', currentMenu_read)
   },
 
+  // async fetch ({ commit, state}, { $config: { baseRL } }) {
+  //   const { data } = await this.$axios.$get(`${baseRL}/navigation-menu`);
+  //   commit('SET_MENU', data);
+  // },
+  async handleSizeChange({ commit, state }, sizePage) {
+    const chunk = (data, size) =>
+      Array.from({ length: Math.ceil(data.length / size) }, (v, i) =>
+        data.slice(i * size, i * size + size)
+      );
+    const paginateMenu = chunk(state.allMenu, sizePage)[state.currentPage - 1];
+    commit('PAGINATE_SIZE_PAGE', sizePage);
+    commit('PAGINATE_MENU', paginateMenu);
+  },
+
+  async handleCurrentChange({ state, commit }, currentPage) {
+    const chunk = (data, size) =>
+      Array.from({ length: Math.ceil(data.length / size) }, (v, i) =>
+        data.slice(i * size, i * size + size)
+      );
+    const paginateMenu = chunk(state.allMenu, state.sizePage)[currentPage - 1];
+    commit('PAGINATE_CURRENT_PAGE', currentPage);
+    commit('PAGINATE_MENU', paginateMenu);
+  },
+
+  async fetch ({ commit, state}) {
+    const { data } = await this.$axios.$get('navigation-menu', state.apiCRUD);
+
+    const chunk = (data, size) =>
+      Array.from({ length: Math.ceil(data.length / size) }, (v, i) =>
+        data.slice(i * size, i * size + size)
+      );
+    const paginateMenu = chunk(data, state.sizePage)[state.currentPage - 1];
+
+    const numberOfPage = Math.ceil(data.length / state.sizePage);
+
+    commit('ALL_MENU', data);
+    commit('PAGINATE_MENU', paginateMenu);
+    commit('NUMBER_OF_PAGE', numberOfPage);
+  },
 
 
 
